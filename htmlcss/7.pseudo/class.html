@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .parent p:first-child{
+            color: lightcoral;
+        }
+        /* first-of-type : 그 타입중의 첫번째. 
+        p타입 중 첫번째는 B이므로 B에 핑크색이 적용된*/
+        /* first-child : 그 자식들중의 첫번째.
+        부모 <div>의 첫번째 자식은 <span>A</span>이다.
+        => 그러므로 p:first-child는 적용되지 않는다.
+        span:first-child 라고 하면 적용이 된다.*/
+
+        .container {
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+        .container:hover {
+            background-color: lightcoral;
+        }
+
+        .focus-input:focus {
+            background-color: lightgreen;
+        }
+
+        /* > : 자식결합자, container-two의 div들을 모두 선택 */
+        .container-two>div {
+            margin-top: 30px;
+            background-color: lightpink;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        /* 홀수번째 컨테이너만 선택 */
+        .container-two>div:nth-child(2n+1) {
+            background-color: lightskyblue;
+        }
+
+        .container-two>div:last-child {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container container-box">
+        Mouse Hover
+    </div>
+
+    <input class="focus-input" type="text">
+
+    <div class="container-two">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="parent">
+        <span>A</span>
+        <p>B</p>
+        <p>C</p>
+    </div>
+</body>
+</html>
