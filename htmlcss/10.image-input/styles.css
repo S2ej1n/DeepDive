@@ -1,0 +1,21 @@
+.image {
+    width: 400px;
+    height: 400px;
+
+    /* 기본값, 이미지가 늘어나거나 찌그러짐 */
+    /* object-fit: fill; */
+    
+    /* 종횡비 유지하는 대신 "잘림". 이미지 비율 유지 (찌그러지지 않음) */
+    /* object-fit: cover;  */
+    
+    /* 종횡비 유지하고 주어진 치수에 맞게 크기가 변화됨.*/
+    /* object-fit: contain;  */
+
+    /* 이미지 크기 조정 안됨 */
+    /* object-fit: none;  */
+
+    /* 이미지가 가장 작은 버전으로 축소됨 */
+    object-fit: scale-down; 
+
+    object-position: left;
+}
