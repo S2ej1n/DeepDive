@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .box-container {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #669966;
+        }
+
+        .box-container div {
+            padding: 10px;
+            border: 1px solid green;
+            background-color: #ffdddd;
+        }
+
+        /* 다른 태그와의 관계에의해 자동으로 배치, 위치 임의 설정 불가 */
+        #static-box {
+            position: static;
+            top: 20px; /* 이거 줘도 전혀 변화 없음. */
+            left: 30px; /* 이거 줘도 전혀 변화 없음. */
+        }
+
+        #relative-box {
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+
+        #absolute-box {
+            position: absolute;
+            top: 20px; /* body 기준으로 하므로 따라감. */
+            right: 150px;
+        }
+
+        #fixed-box{
+            position: fixed;
+            top: 20px;
+            right: 30px;
+        }
+
+        /* ---새로운 디브--- */
+        #relative-box-1 {
+            position: relative;
+            height: 80px;
+            margin-top: 70px;
+            border: 3px solid #669966;
+            width: 200px;
+        }
+
+        #absolute-box-1 {
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            border: 2px solid #ffdddd;
+        }
+
+        /* ---스티키--- */
+        #sticky {
+            position: sticky;
+            top: 100px;
+            padding: 5px;
+            background-color: #669966;
+            border: 2px solid #ffdddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-container">
+        <div id="static-box">static</div>
+        <div id="relative-box">relative</div>
+        <div id="absolute-box">absolute</div>
+        <div id="fixed-box">fixed</div>
+    </div>
+
+    <div id="relative-box-1">
+        relative
+        <div id="absolute-box-1">
+            absolute
+        </div>
+    </div>
+
+    <div id="sticky">지금 우린 sticky~!</div>
+    <div style="padding-bottom: 2000px;">
+        뭘 적으라는데 그냥 복붙해왔어요 우하하하하
+        How long before we fall in love How long before we fall in love
+        Here's a ticket Baby wanna go out?푸른 Palm tree
+        우릴 부르잖아 Don't be picky Yeah 누벼 이 Town 위를
+        Feel like I'm hot stuff You're my rock star
+        Hear me now
+        바람은 Sweet and salty
+        Margarita같이
+        Here on out
+        이 여름 위를 Driving
+        Won't you navigate me
+
+        How long before we fall in love
+        (널 마주친 순간 I fly high)
+        How long before we fall in love
+        (Let me know let me know)
+        Oh 뛰어들어 둘만의 Ocean dive
+        왠지 묘한 이 느낌 녹아내려
+        Sticky sticky sticky sticky
+
+        Love got so poppin' flavor
+        예상 못 한 New taste
+        나른해 Summer fever 내리질 않네
+
+        So hear me now
+        달콤한 맘이 Drippin'
+        Like gelato melting
+        Here on out
+        심장에 남긴 Darlin'
+        Won't you navigate me
+
+        How long before we fall in love
+        (널 마주친 순간 I fly high)
+        How long before we fall in love
+        (Let me know let me know)
+        Oh 뛰어들어 둘만의 Ocean dive
+        왠지 묘한 이 느낌 녹아내려
+        Sticky sticky sticky sticky
+        How long before we fall in love
+        (저 나비처럼 난 Go round round)
+        How long before we fall in love
+        (Let me know let me know)
+        I like it 눈부신 여름빛
+        지금 우린
+        Sticky sticky sticky sticky
+    </div>
+</body>
+
+</html>
