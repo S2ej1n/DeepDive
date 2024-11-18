@@ -1,22 +1,16 @@
 .header {
     height: 55px;
+    background-color: #dbdbdb;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.left-section {
-    display: flex;
-    align-items: center;
-}
-
-.hamburger-menu{
+.menu{
     height: 24px;
-    margin-left: 24px;
-    margin-right: 24px;
 }
 
-.youtube-logo{
+.logo{
     height: 70px;
 }
