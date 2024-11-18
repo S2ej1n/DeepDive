@@ -1,0 +1,83 @@
+.header {
+    height: 68px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed; /* 위에다가 fix해주기 위해서 사용 */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* 맨 위에 띄워주기 위해서 사용함 */
+
+    padding: 4px 45px;
+}
+
+/* 로고섹션 */
+.logo_section{
+
+}
+
+.logo_img{
+    height: 25px;
+}
+
+/* 네브바 섹션 */
+/* 얘를 넷플 로고에 붙이고싶은데 어떻게하지.. */
+.navbar{
+    font-weight: 400;
+    font-size: 14px;
+    color: #b9b9b9;
+}
+
+.navbar a{
+    margin-right: 10px;
+}
+.navbar a:hover{
+    color: #71716F;
+    cursor: pointer;
+}
+
+/* 오른쪽 헤더 */
+.right-section {
+    width: 180px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search_icon{
+    height: 30px;
+}
+
+.right-section a{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.notifications-icon-container{
+    position: relative;
+}
+
+.notifications-count{
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+}
+
+.profile{
+    height: 35px;
+    border-radius: 2px;
+}
