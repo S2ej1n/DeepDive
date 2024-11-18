@@ -74,8 +74,7 @@
     white-space: nowrap;
 }
 .search-button:hover .tooltip,
-.voice-search-button:hover .tooltip,
-.upload-icon-container:hover .tooltip{
+.voice-search-button:hover .tooltip{
     opacity: 1;
 }
 
@@ -113,7 +112,6 @@
     width: 66px;
     background-color: #323232;
     border: 1px solid #4D4D4D;
-    margin-left: -1px;
     margin-right: 10px;
 }
 
