@@ -85,7 +85,7 @@
     height: 16px;
 }
 
-
+/* 깨지는거 해결하려고 미디어쿼리 노가다.. 이렇게 하면 안된댔는데 ㅠㅠ */
 @media (max-width: 750px) {
     .info_title_img{
         height: 22px;
@@ -174,7 +174,7 @@
         border-radius: 5px;
         color: white;
         border: none;
-        height: 34px;
+        height: 38px;
         width: 110px;
         font-size: 15px;
     }
