@@ -86,7 +86,8 @@
 }
 
 .search_button .tooltip,
-.voice_button .tooltip{
+.voice_button .tooltip,
+.more_button .tooltip{
     position: absolute;
     background-color: gray;
     color: white;
@@ -101,7 +102,8 @@
 }
 
 .search_button:hover .tooltip,
-.voice_button:hover .tooltip{
+.voice_button:hover .tooltip,
+.more_button:hover .tooltip{
     opacity: 1;
 }
 
@@ -124,9 +126,25 @@
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
     background-color: #121212; 
     white-space: nowrap;
+
+    display: flex;
+    align-items: center;
 }
 
 .login_button:hover{
     background-color: #272727;
     border: 1px solid #272727;
+}
+
+.more_button {
+    background-color: #000000;
+    border: none;
+}
+.more_icon{
+    height: 24px;
+}
+
+.login_button_img{
+    height: 24px;
+    margin-right: 8px;
 }
