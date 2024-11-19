@@ -88,6 +88,11 @@
     width: 50%;
 }
 
+.adimg{
+    width: 100%;
+    border-radius: 8px;
+}
+
 /* 동영상들 */
 .video_grid{
 
