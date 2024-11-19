@@ -2,6 +2,7 @@
     margin-left: 40px;
     margin-top: -80px;
     /* z-index: 4; */
+    margin-bottom: 50px;
 }
 
 .section1-title{
@@ -21,7 +22,9 @@
 
 .movie-preview:hover{
     transform: scale(1.5);
+    transition-duration: 0.5s;
     z-index: 50;
+    cursor: pointer;
 }
 
 @media (max-width: 750px) {

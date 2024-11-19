@@ -43,6 +43,7 @@
 .navbar a:hover{
     color: #71716F;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 /* 오른쪽 헤더 */
@@ -62,6 +63,10 @@
 .right-section a{
     font-size: 12px;
     font-weight: 400;
+}
+
+.right-section a:hover{
+    cursor: pointer;
 }
 
 .notifications-icon-container{
