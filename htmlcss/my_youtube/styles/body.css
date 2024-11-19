@@ -7,7 +7,7 @@
 /* 사이드바 */
 .sidebar{
     width: 10%;
-    background-color: #4c4c4c;
+    background-color: #000000;
 }
 
 .sidebar-container{
@@ -90,5 +90,5 @@
 
 /* 동영상들 */
 .video_grid{
-    
+
 }
