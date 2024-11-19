@@ -8,6 +8,7 @@
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
+
 /* 드라마 이름 */
 .addlogo{
     width: 38%;
@@ -18,9 +19,8 @@
 
 /* 광고 설명 부분 */
 .add_info{
-    width: 100%;
     position: absolute;
-    top: 196px;
+    top: 35%;
     left: 40px;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .info_title_img{
-    height: 27px;
+    height: 35px;
     border-radius: 5px;
     margin-right: 10px;
 }
@@ -41,19 +41,20 @@
 }
 
 .info_explan{
-    font-size: 13px;
-    font-size: 400;
+    font-size: 15px;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
 /* 재생버튼 */
 .play_but{
-    height: 30px;
-    width: 80px;
+    height: 38px;
+    width: 100px;
     background-color: #ffffff;
     border-radius: 5px;
     border: none;
     margin-right: 5px;
+    font-size: 17px;
 }
 
 .play_but:hover{
@@ -62,7 +63,8 @@
 }
 
 .icon-play-button{
-    height: 10px;
+    height: 14px;
+    margin-right: 3px;
 }
 
 .more_but{
@@ -70,8 +72,9 @@
     border-radius: 5px;
     color: white;
     border: none;
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 130px;
+    font-size: 17px;
 }
 
 .more_but:hover{
@@ -80,5 +83,5 @@
 }
 
 .icons-info{
-    height: 14px;
+    height: 16px;
 }
