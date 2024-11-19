@@ -61,6 +61,10 @@
     cursor: pointer;
 }
 
+.icon-play-button{
+    height: 10px;
+}
+
 .more_but{
     background-color: #6D6D6EB3;
     border-radius: 5px;
@@ -73,4 +77,8 @@
 .more_but:hover{
     background-color: #383634;
     cursor: pointer;
+}
+
+.icons-info{
+    height: 14px;
 }
