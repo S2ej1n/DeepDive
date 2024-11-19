@@ -1,4 +1,40 @@
 .most_search_section{
     margin-left: 40px;
     margin-top: -80px;
+    z-index: 4;
+}
+
+/* 반응형 구현. 미디어쿼리와 그리드 사용*/
+.movie-grid {
+    display: grid;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+    .movie-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+    .movie-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .movie-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+.movie-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 3px;
 }
