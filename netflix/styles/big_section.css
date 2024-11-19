@@ -8,7 +8,6 @@
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
-
 /* 드라마 이름 */
 .addlogo{
     width: 38%;
@@ -20,7 +19,7 @@
 /* 광고 설명 부분 */
 .add_info{
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 40px;
 }
 
@@ -84,4 +83,152 @@
 
 .icons-info{
     height: 16px;
+}
+
+
+@media (max-width: 750px) {
+    .info_title_img{
+        height: 22px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .info_title_text{
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .info_explan{
+        font-size: 0px;
+        font-weight: 400;
+        margin-top: -15px;
+    }
+
+    /* 재생버튼 */
+    .play_but{
+        height: 35px;
+        width: 90px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: none;
+        margin-right: 5px;
+        font-size: 15px;
+    }
+
+    .icon-play-button{
+        height: 14px;
+        margin-right: 3px;
+    }
+
+    .more_but{
+        background-color: #6D6D6EB3;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        height: 34px;
+        width: 110px;
+        font-size: 15px;
+    }
+
+    .icons-info{
+        height: 14px;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+    .info_title_img{
+        height: 26px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .info_title_text{
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .info_explan{
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    /* 재생버튼 */
+    .play_but{
+        height: 35px;
+        width: 90px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: none;
+        margin-right: 5px;
+        font-size: 15px;
+    }
+
+    .icon-play-button{
+        height: 14px;
+        margin-right: 3px;
+    }
+
+    .more_but{
+        background-color: #6D6D6EB3;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        height: 34px;
+        width: 110px;
+        font-size: 15px;
+    }
+
+    .icons-info{
+        height: 14px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .info_title_img{
+        height: 35px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .info_title_text{
+        font-weight: 500;
+    }
+
+    .info_explan{
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    /* 재생버튼 */
+    .play_but{
+        height: 38px;
+        width: 100px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: none;
+        margin-right: 5px;
+        font-size: 17px;
+    }
+
+    .icon-play-button{
+        height: 14px;
+        margin-right: 3px;
+    }
+
+    .more_but{
+        background-color: #6D6D6EB3;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        height: 40px;
+        width: 130px;
+        font-size: 17px;
+    }
+
+    .icons-info{
+        height: 16px;
+    }
 }
