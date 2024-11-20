@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh; /* viewport height의 최소 height를 100으로 설정 */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+img {
+    max-width: 100%;
+}
