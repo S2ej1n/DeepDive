@@ -117,6 +117,29 @@
     overflow: hidden;
 }
 
-/* text-overflow: ellipsis - 뒤에 ... 나옴 */
+.story__user {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+    text-transform: lowercase;
+    max-width: 72px;
+    text-overflow: ellipsis;
+    /* text-overflow: ellipsis - 뒤에 ... 나옴 */
+    white-space: nowrap;
+}
+
+.stories__content {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 16px;
+    padding: 0 16px;
+    position: relative;
+    scroll-behavior: smooth; /* 부드러운 스크롤 화면 전환 */
+    scrollbar-width: none;
+}
 
 /* 웹킷 스크롤바 : 자동으로 생기는걸 방지하게함. (지워줌) */
+.stories__content::-webkit-scrollbar {
+    display: none;
+}
