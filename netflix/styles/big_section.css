@@ -6,6 +6,8 @@
     width: 100%;
     /* 그라디언트 효과 주기 */
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    /* mask-image: linear-gradient(direction, color-stop1, color-stop2, ...); */
+    /* direction: 방향 - to right, to bottom, 45deg (각도), to bottom right 등이 사용될수있음 */
 }
 
 /* 드라마 이름 */
