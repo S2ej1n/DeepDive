@@ -143,3 +143,185 @@
 .stories__content::-webkit-scrollbar {
     display: none;
 }
+
+/* Post */
+.post{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.post__header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DBDBDB;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.post__profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.post__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.post__user {
+    font-size: 14px;
+    font-weight: 500;
+    color: #262626;
+    text-decoration: none;
+    text-transform: lowercase; /* 소문자로 변경 */
+}
+
+.post__user:hover {
+    text-decoration: underline;
+}
+
+/* post 사진 */
+.post__more-options {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.post__content {
+    display: flex;
+    position: relative;
+}
+
+.post__medias {
+    display: flex;
+    overflow-y: hidden;
+    /* 세로가 . 더길때 */
+    overflow-x: auto;
+    /* 가로가 더 길때 
+        scroll은 항상 스크롤바 표시,
+        auto는 내용이 넘어갈때만 스크롤바 표시 */
+
+    width: 100%;
+
+    /* 혹시 사진 여러장 올렸을때를 위해 만들어둔것 */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+/* 스크롤바가 생기면 그것을 없애주기 위해 */
+.post__medias::-webkit-scrollbar {
+    display: none;
+}
+
+.post__media {
+    width: 100%;
+    flex: none;
+    /* 혹시 사진 여러장 올렸을때를 위해 만들어둔것 */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* 포스트의 푸터 */
+.post__footer {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 4px;
+}
+
+.post__buttons {
+    display: flex;
+    position: relative;
+}
+
+.post__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    padding: 8px;
+}
+
+.post__button--align-right {
+    margin-left: auto;
+    /* 왼쪽의 나머지 빈 공간을 마진값으로 만들어줘서 이미지가 오른쪽 정렬됨 */
+}
+
+.post__infos {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    gap: 10px;
+}
+
+.post__likes,
+.post__description {
+    /* background-color: #262626; */
+    display: flex;
+    /* 높이가 자동으로 늘어남! */
+}
+
+.post__likes {
+    align-items: center;
+    gap: 6px;
+}
+
+.post__likes-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.post__likes-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.post__likes span,
+.post__description span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #262626;
+}
+
+.post__likes a,
+.post__description a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #262626;
+    text-decoration: none;
+}
+
+.post__name--underline:hover {
+    text-decoration: underline;
+}
+
+.post__date-time {
+    font-size: 10px;
+    font-weight: 400;
+    color: #999999;
+    text-transform: uppercase;
+}
+
+.post__footer{
+    padding: 4px 8px 12px;
+}
+
+.post__date-time {
+    margin-top: 6px;
+}
