@@ -22,3 +22,26 @@ const headerContainer = document.getElementById('header-container');
 headerContainer.textContent = 'Text Content';
 headerContainer.innerText = 'Inner Text';
 headerContainer.innerHTML = '<span>Inner HTML</span>';
+
+const items = document.getElementsByClassName('list-group-item');
+console.log(items)
+
+items[0].style.color = 'blue';
+items[3].textContent = 'Hi';
+
+let lists = document.getElementsByTagName('li');
+
+// lists.forEach((list) => {
+//     console.log(list)
+// });
+
+// 배열로 만들기
+lists = Array.from(lists);
+console.log(lists);
+
+lists.forEach((list, index) => {
+    list.textContent = `${index}.List`
+});
+
+// 홀수 애들만 반환
+const listOdd = document.getSelectorAll('li:nth-child(odd)')
