@@ -44,4 +44,8 @@ lists.forEach((list, index) => {
 });
 
 // 홀수 애들만 반환
-const listOdd = document.getSelectorAll('li:nth-child(odd)')
+const listOdd = document.querySelectorAll('li:nth-child(odd)')
+
+listOdd.forEach((li) => {
+    li.style.background = 'gray'
+})
