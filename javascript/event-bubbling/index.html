@@ -13,9 +13,9 @@
 
 <!-- p -> div -> form 순으로 alert 뜸 -->
 <body>
-    <form onclick="alert('form')">FORM
-        <div onclick="alert('div')">DIV
-            <p onclick="alert('p')">P</p>
+    <form>FORM
+        <div>DIV
+            <p>P</p>
         </div>
     </form>
     <script>
@@ -23,7 +23,8 @@
         const div = document.querySelector('div');
         const p = document.querySelector('p');
 
-        from.onclick = function(event){
+        //핸들러를 form에 할당.
+        form.onclick = function(event){
             // 이벤트 타겟 알아보기.
             // event.target => 실제 이벤트가 시작된 타겟 요소임
             // 핸들러가 할당된 요소는 this (event.currentTarget)
