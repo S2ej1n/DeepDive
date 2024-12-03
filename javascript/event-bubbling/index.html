@@ -13,9 +13,9 @@
 
 <!-- p -> div -> form 순으로 alert 뜸 -->
 <body>
-    <form>FORM
-        <div>DIV
-            <p>P</p>
+    <form onclick="alert('form')">FORM
+        <div onclick="alert('div')">DIV
+            <p onclick="event.stopPropagation()">P</p>
         </div>
     </form>
     <script>
