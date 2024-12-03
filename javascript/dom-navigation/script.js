@@ -45,5 +45,4 @@ val = listitem.nextElementSibling; // 텍스트노드 미포함
 val = listitem.nextElementSibling.nextElementSibling.previousElementSibling;
 
 
-
 console.log('val', val);
