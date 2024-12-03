@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Capturing</title>
+    <style>
+      body * {
+        margin: 10px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      FORM
+      <div>
+        DIV
+        <p>P</p>
+      </div>
+    </form>
+    <script>
+      for (let element of document.querySelectorAll("*")) {
+        element.addEventListener("click",
+          (e) => alert(`캡쳐링: ${element.tagName}`),
+          // 캡쳐 옵션 트루로 해야함 {capture:true} 나 true 넣으면됨
+          true
+        );
+        element.addEventListener("click", 
+        (e) => alert(`버블링: ${element.tagName}`));
+      }
+    </script>
+  </body>
+</html>
