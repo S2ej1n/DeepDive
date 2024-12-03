@@ -14,13 +14,14 @@
 
     <script>
         //버튼스에 두개 들어감.
-        const buttons = document.getElementsByClassName("buttonClass");
-        for (const button of buttons) {
-            button.addEventListener("click", () => alert('clicked'));
-        }
+        // const buttons = document.getElementsByClassName("buttonClass");
+        // for (const button of buttons) {
+        //     button.addEventListener("click", () => alert('clicked'));
+        // }
 
-        // const buttons = document.getElementById("buttons");
-        // buttons.addEventListener("click", () => alert('clicked'));
+        // 부모 컴포넌트에다가 권한을 주는거기때문에 새로 추가된거에도 기능 추가 됨.
+        const buttons = document.getElementById("buttons");
+        buttons.addEventListener("click", () => alert('clicked'));
 
         // 버튼 하나 더 생성 => 근데 이렇게만 하면 함수 등록이 안됨. -> 그러면 이벤트 위임을 사용하면된다.
         let buttonList = document.querySelector('#buttons');
