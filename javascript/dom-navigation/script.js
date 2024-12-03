@@ -39,6 +39,11 @@ val = listitem.parentNode;
 val = listitem.parentElement;
 // 둘이 똑같음
 
+// next sibling 반환
+val = listitem.nextSibling; //텍스트노드 포함
+val = listitem.nextElementSibling; // 텍스트노드 미포함
+val = listitem.nextElementSibling.nextElementSibling.previousElementSibling;
+
 
 
 console.log('val', val);
