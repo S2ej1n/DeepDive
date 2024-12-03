@@ -11,4 +11,6 @@ const newElement = document.createElement('span');
 
 newElement.textContent = "Hi";
 
+// oldElement.parentNode는 listParent와 같음.
+// 부모 요소를 찾기 위해 parentNode 사용.
 oldElement.parentNode.replaceChild(newElement, oldElement);
