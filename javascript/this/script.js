@@ -38,6 +38,9 @@
 // // 그래서 Audio {title: 'a}가 출력됨.
 // // this.title = title; 얘가 없으면 빈 객체 반환
 
+// 화살표 함수로 변경
+// 화살표 함수의 this는 항상 상위스코프의 this를 가리키게 된다.
+// 이걸 Lexical this라고 함
 const audio = {
     title: 'audio',
     categories: ['rock', 'pop', 'hiphop'],
