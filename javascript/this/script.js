@@ -27,13 +27,24 @@
 // playAudio(); 
 
 
-// Constructor Function => {}
-function Audio(title) {
-    this.title = title;
-    console.log(this);
-}
+// // Constructor Function => {}
+// function Audio(title) {
+//     this.title = title;
+//     console.log(this);
+// }
 
-const audio = new Audio('a');
-// 빈 객체 안에 타이틀은 a
-// 그래서 Audio {title: 'a}가 출력됨.
-// this.title = title; 얘가 없으면 빈 객체 반환
+// const audio = new Audio('a');
+// // 빈 객체 안에 타이틀은 a
+// // 그래서 Audio {title: 'a}가 출력됨.
+// // this.title = title; 얘가 없으면 빈 객체 반환
+
+const audio = {
+    title: 'audio',
+    categories: ['rock', 'pop', 'hiphop'],
+    dispayCategories(){
+        this.categories.forEach(function(category) {
+            console.log(`title: ${this.title}, category: ${category} `);
+        },{title: 'audio'})
+    }
+}
+audio.dispayCategories();
