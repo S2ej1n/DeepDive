@@ -42,9 +42,9 @@ const audio = {
     title: 'audio',
     categories: ['rock', 'pop', 'hiphop'],
     dispayCategories(){
-        this.categories.forEach(function(category) {
-            console.log(`title: ${this.title}, category: ${category} `);
-        },{title: 'audio'})
+        this.categories.forEach((category) => {
+            console.log(this);
+        })
     }
 }
 audio.dispayCategories();
