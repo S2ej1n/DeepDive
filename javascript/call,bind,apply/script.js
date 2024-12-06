@@ -1,6 +1,6 @@
 // Call();
-const fullName = function() {
-    console.log(this.firstName + '' + this.lastName);
+const fullName = function(city, country) {
+    console.log(this.firstName + '' + this.lastName, city, country);
 }
 
 const person1 = {
@@ -8,4 +8,4 @@ const person1 = {
     lastName: 'Smith'
 }
 
-fullName.call(person1);
+fullName.call(person1, "Oslo", "Norway");
