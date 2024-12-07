@@ -35,10 +35,23 @@ const aObject = {
     "cObject": { "a": 1, "b": 2 }
 }
 
-Object.freeze(aObject);
-aObject.a = "c";
-console.log('aObject', aObject); // 얕은 동결을 해서 변경되지 않았음.
+// Object.freeze(aObject);
+// aObject.a = "c";
+// console.log('aObject', aObject); // 얕은 동결을 해서 변경되지 않았음.
 
+// aObject.cObject.a = 3;
+// console.log('aObject', aObject); // 깊이가 깊은곳은 변경되었음.
+// // 여기는 동결이 안됨. 얕은 동결이라.
+
+// ----------------------------------------------------------------
+
+// 깊은 복사deep copy 
+// json.parse(json.stringify())을 이용한 깊은 복사
+const newAObject = JSON.parse(JSON.stringify(aObject));
+console.log('aObject', aObject);
+console.log('newAObject', newAObject);
 aObject.cObject.a = 3;
-console.log('aObject', aObject); // 깊이가 깊은곳은 변경되었음.
-// 여기는 동결이 안됨. 얕은 동결이라.
+
+console.log('aObject', aObject);
+console.log('newAObject', newAObject);
+// 얘는 똑같이 변하지 않았음.
