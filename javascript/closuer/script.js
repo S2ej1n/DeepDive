@@ -7,4 +7,5 @@ function outerFunction(outerVariable) {
 }
 
 const newFunction = outerFunction('outside');
-newFunction('inside');
+console.log('New Function: ' + newFunction);
+// newFunction('inside');
