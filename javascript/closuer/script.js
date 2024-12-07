@@ -12,13 +12,12 @@
 
 let a = 'a';
 
-function functionB() {
-    let a = 'c';
-    console.log(a,b,c); // c is accessible here
-}
-
 function functionA() {
     let b = 'b';
+    function functionB() {
+        let c = 'c';
+        console.log(a,b,c); // c is accessible here
+    }
     functionB()
     console.log(a, b); // a is accessible here
 }
