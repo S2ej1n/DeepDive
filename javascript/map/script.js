@@ -14,3 +14,16 @@ const sum = array.reduce((accumulator, currentValue, currentIndex, array) => {
 });
 
 console.log(sum); // 10
+
+/*
+initialValue가 제공된 경우:
+
+accumulator는 initialValue로 초기화됩니다.
+순회는 배열의 **첫 번째 요소(index 0)**부터 시작합니다.
+이 경우, currentIndex는 0부터 시작합니다.
+initialValue가 제공되지 않은 경우:
+
+accumulator는 배열의 **첫 번째 요소(index 0)**로 초기화됩니다.
+순회는 배열의 **두 번째 요소(index 1)**부터 시작합니다.
+따라서, 이 경우 currentIndex는 1부터 시작합니다.
+*/
