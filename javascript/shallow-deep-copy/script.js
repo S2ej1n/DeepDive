@@ -46,12 +46,22 @@ const aObject = {
 // ----------------------------------------------------------------
 
 // 깊은 복사deep copy 
-// json.parse(json.stringify())을 이용한 깊은 복사
-const newAObject = JSON.parse(JSON.stringify(aObject));
-console.log('aObject', aObject);
-console.log('newAObject', newAObject);
-aObject.cObject.a = 3;
+// 1) json.parse(json.stringify())을 이용한 깊은 복사
+// const newAObject = JSON.parse(JSON.stringify(aObject));
+// console.log('aObject', aObject);
+// console.log('newAObject', newAObject);
+// aObject.cObject.a = 3;
+
+// console.log('aObject', aObject);
+// console.log('newAObject', newAObject);
+// 얘는 똑같이 변하지 않았음.
+
+// 2) nested spread operator을 이용한 깊은 복사
+const newAObject = { ...aObject, cObject: { ...aObject.cObject } }
+// 전체랑, {중첩이 된 부분까지} 얕은 복사 해버림.
 
 console.log('aObject', aObject);
 console.log('newAObject', newAObject);
-// 얘는 똑같이 변하지 않았음.
+aObject.cObject.a = 3;
+console.log('aObject', aObject);
+console.log('newAObject', newAObject);
