@@ -12,10 +12,29 @@
 // console.log(aName)
 // // throws "Uncaught ReferenceError: aName is not defined"
 
-var result = (function () {
-    var name = "Barry";
-    return name;
-})();
-// 함수 자체가 리턴이 되는게 아니라, 결과값이 바로 리턴이됨.
-console.log(result);
-// "Barry"
+// var result = (function () {
+//     var name = "Barry";
+//     return name;
+// })();
+// // 함수 자체가 리턴이 되는게 아니라, 결과값이 바로 리턴이됨.
+// console.log(result);
+// // "Barry"
+
+const score = () => {
+    let count = 0;
+    return {
+        current: () => {return count},
+        increment: () => {count++},
+        reset: () => {count = 0}
+    }
+}
+
+console.log(typeof score);
+console.log(score);
+
+// 사용하려면
+console.log(score().current());
+score().increment();
+console.log(score().current()); //0
+// 다시 호출해서 초기화됨 -> 0
+// 난 1로 올리고싶은데.. -> 그때 즉시 실행 함수 사용하면 됨.
