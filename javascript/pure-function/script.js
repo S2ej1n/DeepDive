@@ -5,7 +5,16 @@
 // console.log(numberUp()); // 1
 // console.log(x); // 1
 
-let x = 0;
-const pureNumberUp = (num) => num += 1;
-console.log(pureNumberUp(x)); // 1
-console.log(x); // 0
+// let x = 0;
+// const pureNumberUp = (num) => num += 1;
+// console.log(pureNumberUp(x)); // 1
+// console.log(x); // 0
+
+const alphabetArray = ['A', 'B'];
+const addItemToArray = (originalArray, newItem) => {
+    originalArray.push(newItem);
+    return originalArray;
+}
+
+console.log(addItemToArray(alphabetArray, 'C'));
+console.log(alphabetArray);
