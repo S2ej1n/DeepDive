@@ -9,3 +9,6 @@ function sum(a,b){
 // 이러면 함수에만 엄격한 모드
 
 // 마지막 방법
+class Cat {
+    
+}
