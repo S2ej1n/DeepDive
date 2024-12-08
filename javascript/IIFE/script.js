@@ -41,3 +41,14 @@ console.log(score.current()); //1로 증가함
 // console.log(score().current()); //0
 // 다시 호출해서 초기화됨 -> 0
 // 난 1로 올리고싶은데.. -> 그때 즉시 실행 함수 사용하면 됨.
+
+const increment = (() => {
+    let counter = 0;
+    const number = (num) =>
+        console.log(`it is ${num} number`);
+    return () => {counter++; number(counter);}
+})();
+
+console.log(increment);
+increment();
+increment();
