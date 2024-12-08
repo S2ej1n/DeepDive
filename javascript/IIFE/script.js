@@ -20,21 +20,24 @@
 // console.log(result);
 // // "Barry"
 
-const score = () => {
+const score = (() => {
     let count = 0;
     return {
         current: () => {return count},
         increment: () => {count++},
         reset: () => {count = 0}
     }
-}
+})()
 
 console.log(typeof score);
 console.log(score);
+console.log(score.current());
+score.increment();
+console.log(score.current()); //1로 증가함
 
 // 사용하려면
-console.log(score().current());
-score().increment();
-console.log(score().current()); //0
+// console.log(score().current());
+// score().increment();
+// console.log(score().current()); //0
 // 다시 호출해서 초기화됨 -> 0
 // 난 1로 올리고싶은데.. -> 그때 즉시 실행 함수 사용하면 됨.
