@@ -31,6 +31,18 @@
             if(entry.isIntersecting) {
               // src에 데이터 src를 넣으면됨
               entry.target.src = entry.target.dataset.src;
+              /*HTML 요소의 dataset 객체는 요소의 data-* 속성을 
+              JavaScript에서 접근할 수 있도록 제공합니다. 
+              이때, data-* 속성의 이름은 dataset 객체의 속성명으로 
+              자동 변환됩니다.
+              
+              JavaScript에서 dataset 객체를 통해 data-* 속성에 접근할 수 있습니다.
+              
+              data- 다음의 부분은 **카멜 표기법(camelCase)**으로 변환되어 사용됩니다:
+              data-src → dataset.src
+              data-user-id → dataset.userId
+              data-product-name → dataset.productName
+              */
 
               // 관찲 멈춤
               observer.unobserve(entry.target);
