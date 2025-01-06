@@ -1,8 +1,23 @@
-let user = {
-    name: 'John',
-    age: 45
+function Person(name, email, birthday) {
+    this.name = name;
+    this.email = email;
+    this.birthday = new Date(birthday);
+    // this.calculateAge = function() {
+    //     const diff = Date.new() - this.birthday.getTime();
+    //     const ageDate = new Date(diff);
+    //     return Math.abs(ageDate.getUTCFullYear() - 1970);
+    // }
 }
 
-console.log(user.name);
-console.log(user.hasOwnProperty('email'));
-// 없는데 에러가 안나고 false가 뜸. 있으면 true라고 뜸.
+// 프로토타입에다 넣어주는것. => 함수는 재사용이 가능하니까.
+Person.prototype.calculateAge = function() {
+    const diff = Date.new() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+// new 키워드
+const john = new Person('John', 'john@example.com', '7-10-91');
+const han = new Person('han', 'han@example.com', '2-11-91');
+console.log(john);
+console.log(han);
