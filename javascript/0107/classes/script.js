@@ -10,7 +10,17 @@ class Person {
     introduce() {
         return `Hello my name is ${this.name}`;
     }
+
+    static multipleNumbers(x,y) {
+        return x * y;
+    }
 }
 
 const john = new Person('john', 'john@example.com','10-3-98');
 console.log(john);
+
+// introduce사용하려면
+john.introduce();
+
+// 클래스 자체에 있는 멀티플넘버스를 사용하려면.
+Person.multipleNumbers(1,2)
