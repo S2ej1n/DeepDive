@@ -32,28 +32,50 @@
 
 // console.log(carA);
 
-const RED = 'red';
-const ORANGE = 'orange';
-const YELLOW = 'yellow';
-// const BLUE = 'blue';
-const BLUE = Symbol('blue');
-const dog = 'blue';
+// const RED = 'red';
+// const ORANGE = 'orange';
+// const YELLOW = 'yellow';
+// // const BLUE = 'blue';
+// const BLUE = Symbol('blue');
+// const dog = 'blue';
 
-function getImportantLevel(color) {
-    switch (color) {
-        case RED:
-            return 'very important';
-        case ORANGE:
-            return 'important';
-        case YELLOW:
-            return 'little important';
-        case BLUE:
-            return 'not important';
-        default:
-            console.log(`${color} not included`)
+// function getImportantLevel(color) {
+//     switch (color) {
+//         case RED:
+//             return 'very important';
+//         case ORANGE:
+//             return 'important';
+//         case YELLOW:
+//             return 'little important';
+//         case BLUE:
+//             return 'not important';
+//         default:
+//             console.log(`${color} not included`)
+//     }
+// }
+
+// console.log(getImportantLevel(BLUE)); // not important
+// console.log(getImportantLevel(dog)); // not important
+// // 이런 실수 방지 위해 심볼 사용한다.
+
+const length = Symbol('length');
+
+class Car {
+    constructor() {
+        this[length] = 0;
+    }
+
+    add(brand, name) {
+        this[brand] = name;
+        this[length]++;
     }
 }
 
-console.log(getImportantLevel(BLUE)); // not important
-console.log(getImportantLevel(dog)); // not important
-// 이런 실수 방지 위해 심볼 사용한다.
+let myCars = new Car();
+myCars.add('kia', 'morning');
+myCars.add('hyundai', 'sonata');
+myCars.add('genesis','gv88')
+
+for (const car in myCars) {
+    console.log(car, myCars[car]);
+}
