@@ -7,27 +7,53 @@
 // console.log(sym3.description); // hi
 
 
-let carA = {
-    id: 1,
-    name: 'morning',
-    brand: 'kia',
-    price: 1000
-}
+// let carA = {
+//     id: 1,
+//     name: 'morning',
+//     brand: 'kia',
+//     price: 1000
+// }
 
-// carA.id = 300;
-// 원래 있던 id의 값을 overrride 하게 됨
+// // carA.id = 300;
+// // 원래 있던 id의 값을 overrride 하게 됨
 
-const idSym = Symbol('id');
-carA[idSym] = 300;
-// 이렇게해주면됨.
+// const idSym = Symbol('id');
+// carA[idSym] = 300;
+// // 이렇게해주면됨.
 
-console.log(Object.getOwnPropertyNames(carA));
+// console.log(Object.getOwnPropertyNames(carA));
 
-for( const key in carA ) {
-    console.log(key);
-}
+// for( const key in carA ) {
+//     console.log(key);
+// }
 
-// 이걸 해야 심볼을 볼 수 있음.
-console.log(Object.getOwnPropertySymbols(carA));
+// // 이걸 해야 심볼을 볼 수 있음.
+// console.log(Object.getOwnPropertySymbols(carA));
 
 // console.log(carA);
+
+const RED = 'red';
+const ORANGE = 'orange';
+const YELLOW = 'yellow';
+// const BLUE = 'blue';
+const BLUE = Symbol('blue');
+const dog = 'blue';
+
+function getImportantLevel(color) {
+    switch (color) {
+        case RED:
+            return 'very important';
+        case ORANGE:
+            return 'important';
+        case YELLOW:
+            return 'little important';
+        case BLUE:
+            return 'not important';
+        default:
+            console.log(`${color} not included`)
+    }
+}
+
+console.log(getImportantLevel(BLUE)); // not important
+console.log(getImportantLevel(dog)); // not important
+// 이런 실수 방지 위해 심볼 사용한다.
