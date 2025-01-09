@@ -56,13 +56,27 @@ function makeIterator(numbers) {
 // console.log(number.next());
 // console.log(number.next());
 
-function* generatorFunctions() {
-    yield 1;
+// function* generatorFunctions() {
+//     yield 1;
+// }
+
+// const generator = generatorFunctions();
+
+// // 이것과 이거는 같다.
+// // generator = generator[Symbol.iterator]();
+
+// console.log(generator.next());
+
+function* createIds() {
+    let index = 1;
+
+    while(true) {
+        yield index++;
+    }
 }
 
-const generator = generatorFunctions();
+const gen = createIds();
 
-// 이것과 이거는 같다.
-// generator = generator[Symbol.iterator]();
-
-console.log(generator.next());
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
