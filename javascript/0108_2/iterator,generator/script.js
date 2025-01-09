@@ -67,16 +67,29 @@ function makeIterator(numbers) {
 
 // console.log(generator.next());
 
-function* createIds() {
-    let index = 1;
+// function* createIds() {
+//     let index = 1;
 
-    while(true) {
-        yield index++;
-    }
+//     while(true) {
+//         yield index++;
+//     }
+// }
+
+// const gen = createIds();
+
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+
+// //억지로 값에 10을 넣어줄 수 있다.
+// console.log(gen.return(10));
+
+function* generatorFunction() {
+    yield* [1,2,3];
 }
 
-const gen = createIds();
+const generator = generatorFunction();
 
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
+for (const number of generator) {
+    console.log(number);
+}
