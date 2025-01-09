@@ -30,7 +30,7 @@ class ChatRoom {
     }
 
     send(message, participant, to) {
-        this.participants[to.name].receive[message, participant];
+        this.participants[to.name].receive(message, participant);
     }
 }
 
