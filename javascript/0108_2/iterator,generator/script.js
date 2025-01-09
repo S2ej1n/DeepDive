@@ -41,17 +41,28 @@ function makeIterator(numbers) {
 // console.log(map[Symbol.iterator]().next());
 
 //----------------------------------------------------------------
-// 제너레이터 함수
-function* sayNumbers() {
+// // 제너레이터 함수
+// function* sayNumbers() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// }
+
+// // 제너레이터 함수의 반환이 제너레이터
+// const number = sayNumbers();
+
+// console.log(number.next());
+// console.log(number.next());
+// console.log(number.next());
+// console.log(number.next());
+
+function* generatorFunctions() {
     yield 1;
-    yield 2;
-    yield 3;
 }
 
-// 제너레이터 함수의 반환이 제너레이터
-const number = sayNumbers();
+const generator = generatorFunctions();
 
-console.log(number.next());
-console.log(number.next());
-console.log(number.next());
-console.log(number.next());
+// 이것과 이거는 같다.
+// generator = generator[Symbol.iterator]();
+
+console.log(generator.next());
