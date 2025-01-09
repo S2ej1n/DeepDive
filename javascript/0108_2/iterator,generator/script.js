@@ -23,10 +23,19 @@ function makeIterator(numbers) {
 // console.log(numbersIterator.next());
 // console.log(numbersIterator.next());
 
-const numbersIterable = [1,2,3];
-const numbersNotIterable = { a:1, b:2 };
-console.log(typeof numbersIterable);
-console.log(typeof numbersNotIterable);
-for ( const n of numbersNotIterable ){
-    console.log(n);
-}
+// const numbersIterable = [1,2,3];
+// const numbersNotIterable = { a:1, b:2 };
+// console.log(typeof numbersIterable);
+// console.log(typeof numbersNotIterable);
+// for ( const n of numbersNotIterable ){
+//     console.log(n);
+// }
+
+const set = new Set([1,2,3,4]);
+console.log('set', set);
+
+const map = new Map([['a',1], ['b',2]])
+console.log('map', map);
+
+console.log(set[Symbol.iterator]().next()); // 이렇게하면 이터레이터가됨.
+console.log(map[Symbol.iterator]().next());
