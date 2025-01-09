@@ -31,11 +31,27 @@ function makeIterator(numbers) {
 //     console.log(n);
 // }
 
-const set = new Set([1,2,3,4]);
-console.log('set', set);
+// const set = new Set([1,2,3,4]);
+// console.log('set', set);
 
-const map = new Map([['a',1], ['b',2]])
-console.log('map', map);
+// const map = new Map([['a',1], ['b',2]])
+// console.log('map', map);
 
-console.log(set[Symbol.iterator]().next()); // 이렇게하면 이터레이터가됨.
-console.log(map[Symbol.iterator]().next());
+// console.log(set[Symbol.iterator]().next()); // 이렇게하면 이터레이터가됨.
+// console.log(map[Symbol.iterator]().next());
+
+//----------------------------------------------------------------
+// 제너레이터 함수
+function* sayNumbers() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+// 제너레이터 함수의 반환이 제너레이터
+const number = sayNumbers();
+
+console.log(number.next());
+console.log(number.next());
+console.log(number.next());
+console.log(number.next());
