@@ -19,3 +19,13 @@
     outline: none;
     box-sizing: border-box;
 }
+
+.cell.header{
+    background-color: #ddd;
+    text-align: center;
+}
+
+.cell.header.active{
+    background: lightblue;
+    color: white;
+}
