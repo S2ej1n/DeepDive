@@ -74,6 +74,7 @@ function createCellEl(cell){
 }
 
 function handleCellClick(cell){
+    clearHeaderActiveState();
     const columnHeader = spreadsheet[0][cell.column];
     const rowHeader = spreadsheet[cell.row][0];
 
@@ -83,6 +84,14 @@ function handleCellClick(cell){
     rowHeaderEl.classList.add("active");
 
     console.log('clicked cell', columnHeaderEl, rowHeaderEl);
+}
+
+function clearHeaderActiveState(){
+    const headers = document.querySelectorAll('.header');
+
+    headers.forEach((header) => {
+        header.classList.remove("active");
+    });
 }
 
 function getElFromRowCol(row, col){
