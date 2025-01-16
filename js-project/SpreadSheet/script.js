@@ -1,20 +1,44 @@
 const spreadSheetContainer = document.querySelector("#spreadsheet-container");
+const exportBtn = document.querySelector("#export-btn");
 const ROWS = 10;
 const COLS = 10;
 const spreadsheet = []
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 class Cell {
-    constructor(isHeader, disabled, data, row, column, rowName, coulumName, active = false){
+    constructor(isHeader, disabled, data, row, column, rowName, columnName, active = false){
         this.isHeader = isHeader;
         this.disabled = disabled;
         this.data = data;
         this.row = row;
         this.column = column;
         this.rowName = rowName;
-        this.coulumName = coulumName;
+        this.columnName = columnName;
         this.active = active;
     }
+}
+
+exportBtn.onclick = function(e){
+    console.log('spreadsheet', spreadsheet);
+    let csv = ""
+    for (let i = 0; i < spreadsheet.length; i++) {
+        if (i===0) continue;
+        csv +=
+            spreadsheet[i]
+            .filter((item) => !item.isHeader)
+            .map(item => item.data)
+            .join(",") + "\r\n";
+    }
+    console.log(csv);
+
+    const csvObj = new Blob([csv])
+    const csvUrl = URL.createObjectURL(csvObj);
+    console.log('csvUrl', csvUrl)
+
+    const a = document.createElement('a');
+    a.href = csvUrl;
+    a.download = "spreadsheet name.csv";
+    a.click();
 }
 
 initSpreadSheet()
@@ -69,8 +93,13 @@ function createCellEl(cell){
     }
 
     cellEl.onclick = () => handleCellClick(cell);
+    cellEl.onchange = (e) => handleOnChange(e.target.value, cell);
 
     return cellEl;
+}
+
+function handleOnChange(data, cell){
+    cell.data = data;
 }
 
 function handleCellClick(cell){
@@ -82,8 +111,8 @@ function handleCellClick(cell){
     const rowHeaderEl = getElFromRowCol(rowHeader.row, rowHeader.column);
     columnHeaderEl.classList.add("active");
     rowHeaderEl.classList.add("active");
-
-    console.log('clicked cell', columnHeaderEl, rowHeaderEl);
+    document.querySelector("#cell-status").innerHTML = cell.columnName + cell.rowName;
+    // console.log('clicked cell', columnHeaderEl, rowHeaderEl);
 }
 
 function clearHeaderActiveState(){
